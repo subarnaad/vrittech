@@ -24,7 +24,7 @@ export default function FeatureSection({
                         {headingMain}
                     </div>
                 </div>
-                <div className=" max-auto grid grid-cols-1 lg:grid-cols-2 gap-8  ">
+                <div className=" max-auto w-16xl grid grid-cols-1 lg:grid-cols-2 gap-8 ">
                     {cards.map((card) => (
                         <CardSection key={card.id} card={card} />
                     ))}
