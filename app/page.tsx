@@ -1,8 +1,11 @@
+import Link from "next/link"
 
 
 export default function Home() {
   return (
-    <div>hi</div>
+    <div>
+      <Link href="/task1">Task1</Link>
+    </div>
   )
 
 }

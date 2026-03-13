@@ -1,0 +1,48 @@
+import { FeatureCardType } from "../types/feature";
+
+export const task1Data: FeatureCardType[] = [
+    {
+        id: 1,
+        title: "Start with Clarity",
+        subtitle: "Step into a better learning path.",
+        description: "Overwhelmed by too many learning options? SkillShikshya provides a clear, curated roadmap from the start. Whether you're a beginner or upskilling, we have a path tailored to your growth.",
+        bgColor: "#F45B5B",
+        image: "c1p1.svg",
+        imageAlt: "Start with Clarity illustration",
+        imagePosition: "absolute -left-16 top-18 bottom-0 w-[240px] sm:w-[220px] md:w-[250px] lg:w-[300px]",
+        contentPosition: "left-image",
+    },
+    {
+        id: 2,
+        title: "Learn by Doing",
+        subtitle: "Practical skills, real projects.",
+        description: "Theory is great, but action is better. At SkillShikshya, you learn by doing. Hands-on projects and real-world scenarios help you build, break, and create—leading to true mastery.",
+        bgColor: "#5492A0",
+        image: "c2p1.svg",
+        imageAlt: "Learn by Doing illustration",
+        imagePosition: "absolute right-0 top-4 w-[150px] sm:w-[180px] md:w-[230px] lg:w-[280px]",
+        contentPosition: "right-image",
+    },
+    {
+        id: 3,
+        title: "Get Mentored & Supported",
+        subtitle: "You're not learning alone.",
+        description: "Stuck or need feedback? SkillShikshya's community of mentors and learners has your back with live support, interactive discussions, and expert insights. You're never on your own.",
+        bgColor: "#6C64A8",
+        image: "c3p1.svg",
+        imageAlt: "Get Mentored illustration",
+        imagePosition: "absolute -left-16 -bottom-16 w-[300px] sm:w-[280px] md:w-[3000px] lg:w-[400px]",
+        contentPosition: "left-image",
+    },
+    {
+        id: 4,
+        title: "Achieve & Showcase",
+        subtitle: "Build your portfolio, get job-ready.",
+        description: "Your journey ends with achievement. Each completed project builds a portfolio showcasing your skills and job readiness, bringing you closer to that dream job, promotion, or your own venture.",
+        bgColor: "#A88964",
+        image: "c4p1.svg",
+        imageAlt: "Achieve and Showcase illustration",
+        imagePosition: "absolute right-0 -bottom-26 w-[250px] sm:w-[280px] md:w-[280px] lg:w-[370px] ",
+        contentPosition: "right-image",
+    },
+];
