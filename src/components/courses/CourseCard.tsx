@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { ArrowRight } from "lucide-react";
 
 interface Props {
     card: { id: number; title: string; number: string; description: string }
@@ -37,8 +38,8 @@ export default function CourseCard({
                     <>
                         <div className="flex justify-end text-sm sm:text-xl lg:text-3xl font-bold group cursor-pointer text-right">
                             <span>View all Courses</span>
-                            <span className="ml-2 -mt-3 text-2xl sm:text-4xl lg:text-6xl leading-none transition-transform duration-300 group-hover:translate-x-2 animate-pulse">
-                                →
+                            <span className="ml-2 text-2xl sm:text-4xl lg:text-6xl leading-none transition-transform duration-300 group-hover:translate-x-2 animate-pulse">
+                                <ArrowRight size={40} />
                             </span>
                         </div>
                         <div className="flex flex-wrap gap-3 sm:gap-5 lg:gap-8 mt-4 sm:mt-6 justify-center lg:justify-start">

@@ -1,12 +1,9 @@
-
-
-
-import FeatureSection from "@/src/components/feathures/FeatureSection"
+import FeatureSection from "@/src/components/features/FeatureSection";
 import { task1Data } from "@/src/data/data";
 
 export default function HomePage() {
     return (
-        <main>
+        <main className="relative">
             <FeatureSection
                 headingTop="Your SkillShikshya Journey"
                 headingMain={
