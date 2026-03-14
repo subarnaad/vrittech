@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes swipe {
+  0% {
+    transform: translate(-100%, 100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(100%, -100%) rotate(45deg);
+  }
+}
+
+.animate-swipe {
+  animation: swipe 0.6s ease forwards;
+}
