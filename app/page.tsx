@@ -27,7 +27,7 @@ export default function Home() {
     <main className="min-h-screen bg-linear-to-br from-[#fff7f5] via-white to-[#fef2f2] px-6 py-10 sm:px-10 lg:px-16 ">
       <div className=" mx-auto flex min-h-[calc(100vh-80px)] max-w-6xl flex-col justify-center ">
         <div className="mb-12 text-center">
-          <p className="mb-3 inline-flex rounded-full border border-red-200 bg-white px-4 py-1 text-sm font-medium text-red-600 shadow-sm">
+          <p className="mb-3 inline-flex rounded-full border border-red-200 bg-white px-4 py-1 text-sm font-medium text-[#C33241] shadow-sm">
             Hello Vrittech
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-[#1A1A1A] sm:text-5xl lg:text-6xl">
@@ -46,7 +46,7 @@ export default function Home() {
 
               <div className="relative z-10 flex h-full flex-col justify-between">
                 <div>
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-red-600 text-lg font-bold text-white shadow-md">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C33241] text-lg font-bold text-white shadow-md">
                     {task.id}
                   </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
                     Open Task
                   </span>
 
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300 group-hover:translate-x-1">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#C33241] text-white transition-transform duration-300 group-hover:translate-x-1">
                     <ArrowRight size={20} />
                   </div>
                 </div>

@@ -36,7 +36,7 @@ export default function PostList({ posts, userId }: PostListProps) {
 
         return sortedPosts.slice(startIndex, endIndex)
     }, [currentPage, sortedPosts])
-    console.log('paginated post', paginatedPosts)
+    // console.log('paginated post', paginatedPosts)
 
     useEffect(() => {
         if (currentPage > totalPages && totalPages > 0) {
@@ -46,7 +46,7 @@ export default function PostList({ posts, userId }: PostListProps) {
         if (currentPage !== 1) {
             setCurrentPage(1)
         }
-    }, [currentPage, sortedPosts.length, totalPages])
+    }, [sortedPosts.length, totalPages])
 
     return (
         <section className="space-y-6">
@@ -78,7 +78,6 @@ export default function PostList({ posts, userId }: PostListProps) {
                                 <PostCard key={post.id} post={post} />
                             ))}
                         </div>
-
                         <Pagination
                             currentPage={currentPage}
                             totalPages={totalPages}
@@ -90,3 +89,5 @@ export default function PostList({ posts, userId }: PostListProps) {
         </section>
     )
 }
+
+

@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
-import UserCard from "@/src/components/task3/UserCard"
-import UserSearch from "@/src/components/task3/UserSearch"
+import UserCard from "@/src/components/task3/users/UserCard"
+import UserSearch from "@/src/components/task3/users/UserSearch"
 import { useUsersStore } from "@/src/store/users.store"
 import { User } from "@/src/types/task3/user"
 
@@ -41,7 +41,7 @@ export default function UserList({ users }: UserListProps) {
                     <p className="text-slate-600">No users found.</p>
                 </div>
             ) : (
-                <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-4">
                     {filteredUsers.map((user) => (
                         <UserCard key={user.id} user={user} />
                     ))}
