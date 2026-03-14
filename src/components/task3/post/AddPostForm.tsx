@@ -33,10 +33,8 @@ export default function AddPostForm({ userId }: AddPostFormProps) {
         e.preventDefault()
         setIsSubmitting(true)
         const validationResult = postSchema.safeParse(formData)
-
         if (!validationResult.success) {
             const fieldErrors = validationResult.error.flatten().fieldErrors
-
             setErrors({
                 title: fieldErrors.title?.[0] || "",
                 body: fieldErrors.body?.[0] || "",
@@ -45,14 +43,11 @@ export default function AddPostForm({ userId }: AddPostFormProps) {
             setIsSubmitting(false)
             return
         }
-
         addPost(userId, validationResult.data.title, validationResult.data.body)
-
         setFormData({
             title: "",
             body: "",
         })
-
         setErrors({})
         setIsSubmitting(false)
     }
@@ -61,17 +56,13 @@ export default function AddPostForm({ userId }: AddPostFormProps) {
         <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <div className="mb-5">
                 <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Add New Post</h2>
-                <p className="mt-1 text-sm text-slate-600">
-                    Create a new post for this user. It will be stored locally.
-                </p>
-            </div>
 
+            </div>
             <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                     <label htmlFor="title" className="mb-2 block text-sm font-medium text-slate-700">
                         Title
                     </label>
-
                     <input
                         id="title"
                         type="text"
@@ -99,12 +90,10 @@ export default function AddPostForm({ userId }: AddPostFormProps) {
                         placeholder="Enter post body"
                         className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-500"
                     />
-
                     {errors.body && (
                         <p className="mt-2 text-sm text-red-600">{errors.body}</p>
                     )}
                 </div>
-
                 <button
                     type="submit"
                     disabled={isSubmitting}

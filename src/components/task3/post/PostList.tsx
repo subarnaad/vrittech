@@ -16,14 +16,16 @@ export default function PostList({ posts, userId }: PostListProps) {
     const { postsByUserId, setPosts } = usePostsStore()
     const [currentPage, setCurrentPage] = useState(1)
     const postsPerPage = 5
+
     useEffect(() => {
         setPosts(userId, posts)
     }, [posts, setPosts, userId])
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const allPosts = postsByUserId[userId] || []
 
     const sortedPosts = useMemo(() => {
-        return [...allPosts].sort((a, b) => b.postId - a.postId)
+        return [...allPosts].sort((a, b) => b.id - a.id)
     }, [allPosts])
 
     const totalPages = Math.ceil(sortedPosts.length / postsPerPage)
@@ -34,18 +36,17 @@ export default function PostList({ posts, userId }: PostListProps) {
 
         return sortedPosts.slice(startIndex, endIndex)
     }, [currentPage, sortedPosts])
+    console.log('paginated post', paginatedPosts)
 
     useEffect(() => {
         if (currentPage > totalPages && totalPages > 0) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
             setCurrentPage(totalPages)
             return
         }
-
         if (currentPage !== 1) {
             setCurrentPage(1)
         }
-    }, [sortedPosts.length, totalPages])
+    }, [currentPage, sortedPosts.length, totalPages])
 
     return (
         <section className="space-y-6">
@@ -66,7 +67,6 @@ export default function PostList({ posts, userId }: PostListProps) {
                         )}
                     </div>
                 </div>
-
                 {sortedPosts.length === 0 ? (
                     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                         <p className="text-slate-600">No posts found for this user.</p>
@@ -75,7 +75,7 @@ export default function PostList({ posts, userId }: PostListProps) {
                     <>
                         <div className="grid gap-4">
                             {paginatedPosts.map((post) => (
-                                <PostCard key={post.postId} post={post} />
+                                <PostCard key={post.id} post={post} />
                             ))}
                         </div>
 

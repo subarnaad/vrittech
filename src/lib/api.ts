@@ -9,7 +9,6 @@ export async function fetchUsers(): Promise<User[]> {
     if (!response.ok) {
         throw new Error("Failed to fetch users")
     }
-
     return response.json()
 }
 
@@ -17,15 +16,12 @@ export async function fetchUserById(userId: number): Promise<User | null> {
     const response = await fetch(`${API_BASE_URL}/users/${userId}`, {
         cache: "no-store",
     })
-
     if (response.status === 404) {
         return null
     }
-
     if (!response.ok) {
         throw new Error("Failed to fetch user")
     }
-
     return response.json()
 }
 
@@ -33,7 +29,7 @@ export async function fetchPostsByUserId(userId: number): Promise<Post[]> {
     const response = await fetch(`${API_BASE_URL}/posts?userId=${userId}`, {
         cache: "no-store",
     })
-
+    // console.log('hħ', response)
     if (!response.ok) {
         throw new Error("Failed to fetch posts")
     }

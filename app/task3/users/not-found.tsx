@@ -8,7 +8,7 @@ export default function NotFoundPage() {
                 <p className="mt-3 text-slate-600">The page you are looking for does not exist.</p>
 
                 <Link
-                    href="/"
+                    href="/task3/users"
                     className="mt-6 inline-flex rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-slate-700"
                 >
                     Go Back Home

@@ -53,7 +53,7 @@ export const usePostsStore = create<PostsStore>((set, get) => ({
         const localPosts = loadLocalPosts(userId)
         const newPost: Post = {
             userId,
-            postId: Date.now(),
+            id: Date.now(),
             title,
             body,
         }

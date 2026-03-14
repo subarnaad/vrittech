@@ -15,7 +15,6 @@ export default async function HomePage() {
                         list of user and their Posts
                     </p>
                 </div>
-
                 <UserList users={users} />
             </div>
         </main>

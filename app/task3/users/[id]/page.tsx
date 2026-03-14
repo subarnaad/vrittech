@@ -5,13 +5,13 @@ import PostList from "@/src/components/task3/post/PostList"
 
 interface UserPostsPageProps {
     params: Promise<{
-        id: number
+        id: string
     }>
 }
 
 export default async function UserPostsPage({ params }: UserPostsPageProps) {
     const { id } = await params
-    const userId = id
+    const userId = Number(id)
 
     if (Number.isNaN(userId)) {
         notFound()

@@ -28,7 +28,6 @@ export default function UserList({ users }: UserListProps) {
         return users.filter((user) => {
             const matchesName = user.name.toLowerCase().includes(normalizedSearch)
             const matchesEmail = user.email.toLowerCase().includes(normalizedSearch)
-
             return matchesName || matchesEmail
         })
     }, [searchTerm, users])
