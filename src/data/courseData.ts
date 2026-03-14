@@ -1,8 +1,8 @@
 export const courseImages = [
-    "CI1.svg",
-    "CI2.svg",
-    "CI3.svg",
-    "CI4.svg",
+    "/CI1.svg",
+    "/CI2.svg",
+    "/CI3.svg",
+    "/CI4.svg",
 ]
 
 export const courseData = [

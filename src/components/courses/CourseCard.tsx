@@ -1,77 +1,8 @@
-
-
-// import Image from "next/image"
-
-// interface Props {
-//     card: { id: number, title: string, number: string, description: string }
-//     active: boolean
-//     recentlyInactive: boolean
-//     onClick: () => void
-//     images: string[]
-// }
-
-// export default function CourseCard({ card, active, recentlyInactive, onClick, images }: Props) {
-
-//     return (
-
-//         <div onClick={onClick} className={`relative cursor-pointer transition-all duration-500 rounded-3xl overflow-hidden ${active ? "w-full lg:w-1/2 bg-red-600 text-white" : "w-full lg:w-1/4 bg-gray-200 text-red-600"} h-135`}>
-
-//             {recentlyInactive && (<div className="absolute inset-0 bg-white opacity-40 animate-swipe"></div>)}
-
-//             <div className={`h-full flex flex-col p-8 transition-transform duration-500 ${active ? "rotate-0 justify-between" : "-rotate-90 justify-between items-center text-center"}`}>
-
-//                 {active ? (
-//                     <>
-//                         {/* Animated Arrow */}
-//                         <h1 className="flex justify-end text-2xl font-extrabold group cursor-pointer">
-//                             View all Courses
-//                             <span className="ml-2 transition-transform duration-300 group-hover:translate-x-2">→</span>
-//                         </h1>
-
-//                         <div className="flex mt-10 ml-1 gap-6">
-//                             {images.map((img, i) => (
-//                                 <Image key={i} src={img} alt="" width={150} height={150} />
-//                             ))}
-//                         </div>
-
-//                         <div className="flex items-end gap-20">
-//                             <h1 className="text-7xl md:text-9xl font-bold">{card.number}</h1>
-
-//                             <div>
-//                                 <h2 className="text-2xl md:text-7xl font-bold">{card.title}</h2>
-//                                 <p className="text-lg mt-2 opacity-80">{card.description}</p>
-//                             </div>
-//                         </div>
-//                     </>
-//                 ) : (
-
-//                     /* Improved Inactive Card */
-//                     <div className="flex flex-col justify-between h-full w-full">
-
-//                         <div>
-//                             <h2 className="text-xl font-bold">{card.title}</h2>
-//                             <p className="text-sm mt-2 opacity-80">{card.description}</p>
-//                         </div>
-
-//                         <h1 className="text-8xl font-bold self-end">{card.number}</h1>
-
-//                     </div>
-
-//                 )}
-
-//             </div>
-
-//         </div>
-
-//     )
-// }
-
 import Image from "next/image"
 
 interface Props {
     card: { id: number; title: string; number: string; description: string }
     active: boolean
-    recentlyInactive: boolean
     onClick: () => void
     images: string[]
 }
@@ -79,11 +10,9 @@ interface Props {
 export default function CourseCard({
     card,
     active,
-    recentlyInactive,
     onClick,
     images,
 }: Props) {
-    const number = card.number.replace("+", "")
     const titleWords = card.title.split(" ")
     const firstWord = titleWords[0] || ""
     const remainingWords = titleWords.slice(1).join(" ")
@@ -126,7 +55,7 @@ export default function CourseCard({
                         </div>
                         <div className="flex flex-col lg:flex-row lg:items-end gap-4 sm:gap-6 lg:gap-10 xl:gap-16">
                             <h1 className="text-[56px] sm:text-[80px] lg:text-[120px] font-bold leading-none shrink-0">
-                                {number}
+                                {card.number}
                             </h1>
 
                             <div className="ml-10">
@@ -159,7 +88,7 @@ export default function CourseCard({
                             </div>
 
                             <h1 className=" flex flex-row text-[56px] sm:text-[80px] lg:text-[100px] font-bold leading-none">
-                                {number}
+                                {card.number}
                             </h1>
                         </div>
                     </>

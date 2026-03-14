@@ -7,10 +7,8 @@ import { courseData, courseImages } from "@/src/data/courseData"
 export default function CourseSection() {
 
     const [active, setActive] = useState(0)
-    const [lastActive, setLastActive] = useState<number | null>(null)
 
     const handleClick = (id: number) => {
-        setLastActive(active)
         setActive(id)
     }
 
@@ -24,7 +22,6 @@ export default function CourseSection() {
                     card={card}
                     images={courseImages}
                     active={active === card.id}
-                    recentlyInactive={lastActive === card.id}
                     onClick={() => handleClick(card.id)}
                 />
             ))}
