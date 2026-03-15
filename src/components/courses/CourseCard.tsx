@@ -24,7 +24,7 @@ export default function CourseCard({
             className={`relative cursor-pointer overflow-hidden rounded-3xl h-80 sm:h-95 lg:h-120 transition-all duration-500
         ${active
                     ? "w-full lg:w-1/2 bg-[#C33241] text-white"
-                    : "w-full sm:w-full lg:w-1/4 bg-[#E9DCDC] text-[#C33241]"
+                    : "w-full sm:w-full lg:w-1/4 inset-shadow-sm inset-shadow-red-500 shadow-2xl text-[#C33241]"
                 }`}
         >
             <div
