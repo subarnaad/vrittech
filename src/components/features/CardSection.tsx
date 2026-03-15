@@ -38,7 +38,7 @@ function SlideContent({
 
     return (
         <div
-            className="relative h-85 overflow-visible rounded-[28px] shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
+            className="relative h-70 overflow-visible rounded-[28px] shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
             style={{ backgroundColor: bgColor }}
             onClick={onClick}
         >
@@ -86,23 +86,23 @@ function SlideContent({
                 />
             </div>
             <div
-                className={`relative z-10 h-full px-8 py-8 sm:px-10 sm:py-10  ${isLeftImage
+                className={`relative z-10 px-8 py-8   ${isLeftImage
                     ? "pl-[42%] sm:pl-[38%] md:pl-[45%]"
                     : "pr-[6%] sm:pr-[30%] md:pr-[35%]"
                     }`}
             >
-                <h3 className="text-[#FAFAFA] text-[24px] sm:text-[28px] md:text-[32px] font-extrabold tracking-[-0.02em] leading-tight">
+                <h3 className="text-[#FAFAFA] text-[24px] sm:text-[28px] md:text-[30px] font-extrabold tracking-[-0.02em] leading-tight">
                     {slide.title}
                 </h3>
 
                 {slide.subtitle && (
-                    <p className="mt-3 text-white text-[16px] sm:text-[18px] md:text-[22px] font-semibold leading-snug">
+                    <p className="mt-3 text-white text-[16px] sm:text-[18px] md:text-[18px] font-semibold leading-snug">
                         {slide.subtitle}
                     </p>
                 )}
 
                 {slide.description && (
-                    <p className="mt-4 text-white/95 text-[13px] sm:text-[14px] md:text-[18px] leading-[1.55] max-w-[95%]">
+                    <p className="mt-4 text-white/95 text-[13px] sm:text-[14px] md:text-[14px] leading-[1.55] max-w-[95%]">
                         {slide.description}
                     </p>
                 )}
@@ -145,7 +145,7 @@ export default function CardSection({ card }: FeatureCardProps) {
 
     return (
         <div
-            className="relative"
+            className="relative hover:cursor-pointer"
             onMouseEnter={() => {
                 if (!hasMultipleSlides) return;
                 setHovered(true);
@@ -155,7 +155,7 @@ export default function CardSection({ card }: FeatureCardProps) {
                 setHovered(false);
             }}
         >
-            <div className="relative h-100">
+            <div className="relative h-80">
                 {hasMultipleSlides && (
                     <div
                         className={`absolute inset-0 z-10 transition-all duration-3s ease-in-out ${hovered
