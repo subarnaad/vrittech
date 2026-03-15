@@ -28,7 +28,7 @@ export default function Home() {
       <div className=" mx-auto flex min-h-[calc(100vh-80px)] max-w-6xl flex-col justify-center ">
         <div className="mb-12 text-center">
           <p className="mb-3 inline-flex rounded-full border border-red-200 bg-white px-4 py-1 text-sm font-medium text-[#C33241] shadow-sm">
-            Hello Vrittech
+            Hello Vrittech, This is Subarna Adhikari
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-[#1A1A1A] sm:text-5xl lg:text-6xl">
             Task Galery

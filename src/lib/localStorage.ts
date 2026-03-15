@@ -22,7 +22,7 @@ export function saveLocalPosts(userId: number, posts: Post[]) {
     try {
         localStorage.setItem(getStorageKey(userId), JSON.stringify(posts))
     } catch {
-        // silently fail for now
+
     }
 }
 
