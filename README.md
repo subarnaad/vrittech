@@ -1,3 +1,8 @@
+
+task 1
+figma design implemented with nextjs and tailwind css.
+
+Task 2
 # User & Posts Dashboard
 
 A small dashboard built with Next.js and TypeScript that displays users and their posts using the JSONPlaceholder public API.
