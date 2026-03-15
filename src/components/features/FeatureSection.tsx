@@ -15,7 +15,7 @@ export default function FeatureSection({
 }: FeatureSectionProps) {
     return (
         <section className="w-full bg-[#F3F3F3]  ">
-            <div className="mx-auto max-w-360 px-4 sm:px-6 lg:px-8  max-h-260.5">
+            <div className="mx-auto max-w-10/12 px-4 sm:px-6 lg:px-8">
                 <div className="mb-10 sm:mb-14">
                     <div className="px-4 sm:px-6 lg:px-10 pt-6">
                         <Link

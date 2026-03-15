@@ -121,7 +121,7 @@ export default function CourseCard({ card, active, onClick, images }: Props) {
         <div
             onClick={onClick}
             className={`relative cursor-pointer overflow-hidden rounded-3xl transition-all duration-500
-      h-[320px] sm:h-[360px] lg:h-[520px]
+      h-80 sm:h-90 lg:h-130
       ${active
                     ? "w-full lg:w-1/2 bg-[#C33241] text-white"
                     : "w-full sm:w-full lg:w-1/4 bg-[#E9DCDC] text-[#C33241]"
