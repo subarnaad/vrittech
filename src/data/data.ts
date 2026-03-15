@@ -12,7 +12,7 @@ export const task1Data: FeatureCardType[] = [
                 description: "Overwhelmed by too many learning options? SkillShikshya provides a clear, curated roadmap from the start. Whether you're a beginner or upskilling, we have a path tailored to your growth.",
                 image: "c1p1.svg",
                 imageAlt: "Start with Clarity illustration",
-                imagePosition: "absolute -left-15 top-4 bottom-0 w-[240px] sm:w-[220px] md:w-[250px] lg:w-[250px]",
+                imagePosition: "absolute -left-5 top-4 bottom-0 w-[240px] sm:w-[220px] md:w-[250px] lg:w-[250px]",
                 contentPosition: "left-image",
             },
             {
@@ -65,7 +65,7 @@ export const task1Data: FeatureCardType[] = [
                 description: "Stuck or need feedback? SkillShikshya's community of mentors and learners has your back with live support, interactive discussions, and expert insights. You're never on your own.",
                 image: "c3p1.svg",
                 imageAlt: "Get Mentored illustration",
-                imagePosition: "absolute -left-14 top-18 bottom-0 w-[240px] sm:w-[220px] md:w-[250px] lg:w-[250px]",
+                imagePosition: "absolute -left-14 top-18 bottom-0 w-[240px] sm:w-[220px] md:w-[250px] lg:w-[310px]",
                 contentPosition: "left-image",
             }
         ]
