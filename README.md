@@ -37,3 +37,10 @@ A small dashboard built with Next.js and TypeScript that displays users and thei
 ```bash
 pnpm install
 pnpm dev
+```
+## Demo Link
+
+```
+https://vrittech-sooty.vercel.app/
+```
+
