@@ -12,7 +12,7 @@ export default function Loading() {
                 </div>
                 {apiIsLoading && (
                     <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <p className="text-slate-700">Loading users...</p>
+                        <p className="text-slate-700">Loading users post...</p>
                     </div>
                 )}
             </div>

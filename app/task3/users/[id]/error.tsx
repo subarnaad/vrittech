@@ -3,7 +3,6 @@
 import BackButton from "@/src/components/task3/common/BackButton"
 
 export default function ErrorPage({
-    error,
     reset,
 }: {
     error: Error & { digest?: string }
